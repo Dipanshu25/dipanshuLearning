@@ -1,0 +1,35 @@
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class GFG {
+	public static void main (String[] args) {
+		//code
+	
+	    Scanner sc=new Scanner(System.in);
+	    int T=sc.nextInt();
+	    while(T-- >0){
+	        int N=sc.nextInt();
+	        int sum=0;
+	        for(int i=1;i<=N;i++){
+	            sum= sum +sumOf(i);
+	        }
+	    
+	        System.out.println(sum);
+	    }
+	}
+       static int sumOf(int x){
+           int s=0;
+           for(int j=1;j<=x;j++){
+               s=s+j;
+           }
+           return(s);
+           
+       }
+    
+    
+    
+    
+    
+}
