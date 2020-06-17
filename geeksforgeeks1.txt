@@ -1,0 +1,34 @@
+/*package whatever //do not write package name here */
+import java.math.BigInteger;
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class GFG {
+	public static void main (String[] args) {
+		//code
+	
+	   
+ Scanner sc=new Scanner(System.in);
+	
+byte T=sc.nextByte();
+	
+while(T-- >0){
+	    
+String N=sc.next();
+	 
+    long n=Long.parseLong(N);
+
+	  int r=(int)(Math.log(n)/Math.log(8));
+	 
+ if((long)Math.pow(8,r)==n)
+	 
+ System.out.println("Yes");
+	  
+else
+	 
+ System.out.println("No");
+	}
+	    
+	}
+}
