@@ -1,0 +1,33 @@
+/*package whatever //do not write package name here */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class GFG {
+	public static void main (String[] args) {
+		//code
+	
+	    Scanner sc=new Scanner(System.in);
+	    Byte T=sc.nextByte();
+	    while(T-- >0){
+	        int N=sc.nextInt();
+	        int sum=0;
+	        int[] a=new int[N];
+	        for(int i=0;i<N;i++){
+	            a[i]=sc.nextInt();
+	          sum=sum+a[i];  
+	        } 
+	        int actualsum=(N+1)*(a[0]+a[N-1])/2;
+	        System.out.println(actualsum-sum);
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	    }
+	    
+	}
+}
