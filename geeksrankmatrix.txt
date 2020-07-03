@@ -1,0 +1,57 @@
+/*package whatever //do not write package name here */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class GFG {
+	public static void main (String[] args) {
+		//code
+	Scanner sc=new Scanner(System.in);
+	byte T=sc.nextByte();
+	while(T-- >0){
+	    int[][] a=new int[3][3];
+	    int count=0;
+	    for(int i=0;i<3;i++){
+	        for(int j=0;j<3;j++){
+	            a[i][j]=sc.nextInt();
+	        }
+	    }
+  int D=0;
+  int x=a[0][0]*(a[1][1]*a[2][2]-a[2][1]*a[1][2]);
+ 	         int y=a[0][1]*(a[1][0]*a[2][2]-a[2][0]*a[1][2]);
+	     int z=a[0][2]*(a[2][1]*a[1][0]-a[2][0]*a[1][1]);
+	
+	    D=x-y+z;
+	    if(D!=0)
+	    System.out.println("3");
+	    else
+	    {
+	        int b=a[0][0]*a[1][1]-a[1][0]*a[0][1];
+	        int c=a[0][1]*a[1][2]-a[1][1]*a[0][2];
+	    int d=a[1][0]*a[2][1]-a[2][0]*a[1][1];
+	    int e=a[1][1]*a[2][2]-a[2][1]*a[1][2];
+	 if(b!=0||c!=0||d!=0||e!=0)
+     System.out.println("2");
+     else{
+     for(int i=0;i<3;i++){
+         for(int j=0;j<3;j++){
+             if(a[i][j]!=0){
+             System.out.println("1");
+             count++;
+             break;
+                }
+         }
+     }
+         if(count==0)
+         System.out.println(count);
+     }
+	        
+	    }
+	}
+	
+	    
+	    
+	    
+	}
+}
