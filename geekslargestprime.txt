@@ -1,0 +1,37 @@
+/*package whatever //do not write package name here */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class GFG {
+	public static void main (String[] args) {
+		//code
+	Scanner sc= new Scanner(System.in);
+	byte T=sc.nextByte();
+	while(T-- >0){
+	    long N=sc.nextLong();
+	    long ans=0;
+	    
+	    while(N%2==0){
+	       ans=2;
+	        N=N/2;
+	    }
+	    
+	    for(long j=3;j<=Math.sqrt(N);j+=2){
+	       while(N%j==0){
+	       ans=j;
+	            N=N/j;
+	       }
+	    }
+	       
+	       if(N>2){
+	           ans=N;
+	       }
+	   
+	    System.out.println(ans);
+	    
+	}
+	    
+	}
+}
