@@ -1,0 +1,33 @@
+  Scanner sc=new Scanner(System.in);
+	   int T=sc.nextInt();
+	   while(T-- >0 ){
+	       int N=sc.nextInt();
+	       int sum=0;
+	       int a[]=new int[N];
+	       int M=(int)Math.pow(2,N);
+	       int b[]=new int[M];
+	       int K=0;
+	       for(int i=0;i<N;i++){
+	           a[i]=sc.nextInt();
+	       }
+	       for(int i=0;i<(1<<N);i++){
+	           System.out.print("{");
+	           for(int j=0;j<N;j++){
+	                if ((i & (1 << j)) > 0) {
+	                  System.out.print(a[j]+ " ");
+	                   sum+=a[j];
+	               }
+	           }
+	           System.out.println("}");
+	            b[K]=sum;
+	          K++;
+	          sum=0;
+	       }
+	   Arrays.sort(b);
+	   
+	   System.out.println(Arrays.toString(b));
+	       
+	   }
+	    
+	}
+}
